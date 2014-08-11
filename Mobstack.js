@@ -5,12 +5,14 @@ function procCmd(c) {
     var cmd = c.split(" ");
     if (cmd[0] == "mob") {
         if (cmd[1]) {
-            mobstack(cmd[1]);
+        	cmd.shift();
+            mobstack(cmd);
         }
     }
 }
 var mobstack = function (mob) {
     var i = 0;
+    mob = mob.replace(/\s+/g, '');
     stack = mob.split(",");
     for (i = 0; i < stack.length; i++) {
         switch (stack[i].toLowerCase()) {
@@ -58,6 +60,12 @@ var mobstack = function (mob) {
             break;
         case "silverfish":
             stack[i] = Level.spawnMob(Player.getX(), Player.getY() + i, Player.getZ(), 39, "mob/silverfish.png");
+            break;
+        case "tnt":
+            stack[i] = Level.spawnMob(Player.getX(), Player.getY() + i, Player.getZ(), 65, "mob/cow.png");
+            break;
+        case "sand":
+            stack[i] = Level.spawnMob(Player.getX(), Player.getY() + i, Player.getZ(), 66, "mob/cow.png");
             break;
         default:
             for(i = 0; i < stack.length; i++) {

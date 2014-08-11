@@ -10,10 +10,8 @@ function procCmd(c) {
         }
     }
 }
-var mobstack = function (mob) {
+var mobstack = function (stack) {
     var i = 0;
-    mob = mob.replace(/\s+/g, '');
-    stack = mob.split(",");
     for (i = 0; i < stack.length; i++) {
         switch (stack[i].toLowerCase()) {
         case "chicken":

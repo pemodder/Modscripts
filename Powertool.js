@@ -1,3 +1,7 @@
+//Powertools Mod by atomicTissue
+//DO NOT COPY THIS MOD
+//If you do, I will know. And then I will alert the community, who will verbally attack you and discredit you forever and ever and ever
+
 var powertools = [];
 
 ModPE.callCommand = function(command) {
